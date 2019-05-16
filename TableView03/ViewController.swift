@@ -38,6 +38,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        myTableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Memo.dummyMemoList.count
     }

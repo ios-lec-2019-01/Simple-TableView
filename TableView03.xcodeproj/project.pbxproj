@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0550CE04228CF44C005BFD73 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550CE03228CF44C005BFD73 /* ComposeViewController.swift */; };
+		0550CE06228CF947005BFD73 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550CE05228CF947005BFD73 /* DetailViewController.swift */; };
 		05DD79D5228C53A1003FE955 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD79D4228C53A1003FE955 /* Memo.swift */; };
 		4E2D012D227812A000D5E183 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D012C227812A000D5E183 /* AppDelegate.swift */; };
 		4E2D012F227812A000D5E183 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D012E227812A000D5E183 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0550CE03228CF44C005BFD73 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		0550CE05228CF947005BFD73 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		05DD79D4228C53A1003FE955 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		4E2D0129227812A000D5E183 /* TableView03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2D012C227812A000D5E183 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				4E2D012C227812A000D5E183 /* AppDelegate.swift */,
 				4E2D012E227812A000D5E183 /* ViewController.swift */,
 				4E2D0130227812A000D5E183 /* Main.storyboard */,
+				0550CE05228CF947005BFD73 /* DetailViewController.swift */,
+				0550CE03228CF44C005BFD73 /* ComposeViewController.swift */,
 				4E2D0133227812AA00D5E183 /* Assets.xcassets */,
 				4E2D0135227812AA00D5E183 /* LaunchScreen.storyboard */,
 				4E2D0138227812AA00D5E183 /* Info.plist */,
@@ -140,7 +146,9 @@
 			files = (
 				05DD79D5228C53A1003FE955 /* Memo.swift in Sources */,
 				4E2D012F227812A000D5E183 /* ViewController.swift in Sources */,
+				0550CE06228CF947005BFD73 /* DetailViewController.swift in Sources */,
 				4E2D012D227812A000D5E183 /* AppDelegate.swift in Sources */,
+				0550CE04228CF44C005BFD73 /* ComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
