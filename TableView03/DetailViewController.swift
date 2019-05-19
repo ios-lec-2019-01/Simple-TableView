@@ -8,12 +8,59 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var memo: Memo?
 
+    @IBOutlet weak var detailTableView: UITableView!
+    
+     let f = DateFormatter()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        detailTableView.dataSource = self
+        detailTableView.delegate = self
+        
+        // 날짜 형식 지정
+        f.dateStyle = .long
+        f.timeStyle = .medium
+        f.locale = Locale(identifier: "KO_kr")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return (memo?.content.count)!
+        return (2)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        if indexPath.row == 0 {
+            let cell = detailTableView.dequeueReusableCell(withIdentifier: "memoCell", for: indexPath)
+            cell.textLabel?.text = memo?.content
+            return cell
+        } else if indexPath.row == 1 {
+            let cell = detailTableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath)
+            cell.textLabel?.text = f.string(for: memo?.insertData)
+            return cell
+        } else {
+            fatalError()
+        }
+
+//        switch indexPath.row {
+//        case 0:
+//            let cell = detailTableView.dequeueReusableCell(withIdentifier: "memoCelll", for: indexPath)
+//            cell.textLabel?.text = memo?.content
+//            return cell
+//
+//        case 1:
+//            let cell = detailTableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath)
+//            cell.textLabel?.text = f.string(for: memo?.insertData)
+//            return cell
+//
+//         default:
+//            fatalError()
+//        }
+    
     }
     
 

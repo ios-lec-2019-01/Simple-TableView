@@ -59,7 +59,23 @@ class ViewController: UIViewController, UITableViewDataSource {
         //cell.imageView?.image = UIImage(named: animals[row])
         
         return cell
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let cell = sender as? UITableViewCell, let indexPath = myTableView.indexPath(for: cell) {
+//            let target = Memo.dummyMemoList[indexPath.row]
+//
+//            if let vc = segue.destination as? DetailViewController {
+//                vc.memo = target
+//            }
+//        }
+        if segue.identifier == "goDetail" {
+            let Deatilvc = segue.destination as? DetailViewController
+            let myIndexPath = myTableView.indexPathForSelectedRow
+            let myRow = myIndexPath?.row
+            let target = Memo.dummyMemoList[myRow!]
+            Deatilvc!.memo = target
+        }
     }
 }
 
